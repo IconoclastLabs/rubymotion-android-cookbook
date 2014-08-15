@@ -1,7 +1,6 @@
-rubymotion-android-cookbook
+RubyMotion Android Cookbook
 ===========================
 
-Awesome rm cookbook examples for android
+Awesome RM cookbook examples for Android.  Examples are interpretations from [Apress Android Recipes - A Problem-Solution Approach](http://www.apress.com/mobile/android/9781430263227)
 
-Examples are interpretations from Apress Android Recipes - A Problem-Solution Approach
 ![Book Cover](./_art/aar.png)
