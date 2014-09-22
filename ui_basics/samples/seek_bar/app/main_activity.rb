@@ -6,8 +6,8 @@ class MainActivity < Android::App::Activity
   def onCreate(savedInstanceState)
     super
     
-    layoutParams = Android::Widget::LinearLayout::LayoutParams.new(800, 150)
-    #layoutParams.gravity = Android::View::Gravity::CENTER
+    layoutParams = Android::Widget::LinearLayout::LayoutParams.new(Android::View::ViewGroup::LayoutParams::MATCH_PARENT, Android::View::ViewGroup::LayoutParams::WRAP_CONTENT )
+    
     
     seekBar = Android::Widget::SeekBar.new(self)
     seekBar.Max = 100
@@ -26,6 +26,8 @@ class MainActivity < Android::App::Activity
     
     linearLayout.addView(@textView)
     linearLayout.addView(seekBar)
+    linearLayout.Orientation = Android::Widget::LinearLayout::VERTICAL
+    
     
     linearLayout.setPadding(40,40,0,40)
     self.contentView = linearLayout
@@ -33,7 +35,7 @@ class MainActivity < Android::App::Activity
   
   
   def onProgressChanged(seekBar, progress, fromUser)
-     @textView.Text = progress.to_s
+     @textView.Text = "Selected Value: "  + progress.to_s
   end
 
   def onStartTrackingTouch(seekBar)
